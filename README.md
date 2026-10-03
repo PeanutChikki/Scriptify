@@ -1,1 +1,1 @@
-# smart-doc-generator-incursion
+# SCRIPTIFY (SMART DOC GENERATOR)
