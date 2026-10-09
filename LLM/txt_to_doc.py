@@ -60,7 +60,7 @@ def insert_after(paragraph, text: str) -> Paragraph:
     return new_par
 
 
-def main() -> None:
+def txt_to_doc() -> None:
     if not TXT_FILE.exists():
         sys.exit(f"Could not find {TXT_FILE}")
     if not TEMPLATE.exists():
@@ -94,7 +94,3 @@ def main() -> None:
 
     doc.save(str(DOCX_FILE))
     print(f"Done. Saved to: {DOCX_FILE}")
-
-
-if __name__ == "__main__":
-    main()

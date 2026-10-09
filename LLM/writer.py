@@ -2,6 +2,8 @@ import re
 import subprocess
 import sys
 from pathlib import Path
+from txt_to_doc import txt_to_doc
+
 
 MODEL = "hf.co/AtomicChat/Qwen3.5-4B-GGUF:Q4_K_M"
 TXT_FILE = Path.cwd() / "output.txt"  # always the current folder
