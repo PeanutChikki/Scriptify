@@ -2,9 +2,10 @@ import json
 import re
 import subprocess
 import sys
+from pathlib import Path
 
 MODEL = "hf.co/AtomicChat/Qwen3.5-4B-GGUF:Q4_K_M"
-TABLE_FILE = "/home/suyash-naik/All/Scriptify/Database/temp_index.json"
+TABLE_FILE = Path(__file__).resolve().parents[1] / "Database" / "temp_index.json"
 
 
 def load_table(path):
