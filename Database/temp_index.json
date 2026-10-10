@@ -1,14 +1,12 @@
 {
-  "Table":{
-    "leave_application": 1,
-    "event_budget": 2,
-    "expense_report": 3,
+  "Table": {
     "purchase_order": 4,
     "travel_request": 5,
     "invoice": 6,
     "timesheet": 7,
     "meeting_minutes": 8,
     "project_proposal": 9,
-    "performance_review": 10
+    "performance_review": 10,
+    "pest_control": 11
   }
 }

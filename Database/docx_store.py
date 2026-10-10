@@ -65,7 +65,7 @@ def _template_name(value: str | Path) -> str:
 
 
 def _is_docx(path: Path) -> bool:
-    if path.suffix.lower() != ".docx" or not path.is_file():
+    if path.suffix.lower() not in (".docx", ".dotx") or not path.is_file():
         return False
     try:
         with zipfile.ZipFile(path) as archive:
@@ -82,19 +82,20 @@ def insert_document(
     index_path: str | Path = INDEX_PATH,
     templates_dir: str | Path = TEMPLATES_DIR,
 ) -> int:
-    """Copy a valid DOCX template into the database and return its reference.
+    """Copy a valid DOCX or DOTX template into the database and return its reference.
 
     Existing names retain their reference. Replacing an existing document
     requires ``replace=True``; new names receive the next unused positive ID.
     """
     source_path = Path(source).expanduser().resolve()
     if not _is_docx(source_path):
-        raise ValueError(f"Not a valid .docx document: {source_path}")
+        raise ValueError(f"Not a valid .docx or .dotx document: {source_path}")
     template_name = _template_name(name if name is not None else source_path.name)
     index_file = Path(index_path)
     document_dir = Path(templates_dir)
     table = _load_index(index_file)
-    destination = document_dir / f"{template_name}.docx"
+    ext = source_path.suffix.lower() or ".docx"
+    destination = document_dir / f"{template_name}{ext}"
 
     if template_name in table:
         if destination.is_file() and not replace:
@@ -143,17 +144,23 @@ def delete_document(
     if isinstance(template, int) and not isinstance(template, bool):
         match = next((name for name, reference in table.items() if reference == template), None)
     elif isinstance(template, str):
-        normalized = _template_name(template)
-        match = normalized if normalized in table else None
+        if template.strip().isdigit():
+            target_ref = int(template.strip())
+            match = next((name for name, reference in table.items() if reference == target_ref), None)
+        else:
+            match = None
+        if match is None:
+            normalized = _template_name(template)
+            match = normalized if normalized in table else None
     else:
         raise TypeError("template must be a template name or integer reference")
     if match is None:
         return False
 
-    document_path = document_dir / f"{match}.docx"
+    (document_dir / f"{match}.docx").unlink(missing_ok=True)
+    (document_dir / f"{match}.dotx").unlink(missing_ok=True)
     table.pop(match)
     _write_index(table, index_file)
-    document_path.unlink(missing_ok=True)
     return True
 
 
@@ -168,16 +175,25 @@ def get_document_path(
     if isinstance(template, int) and not isinstance(template, bool):
         match = next((name for name, reference in table.items() if reference == template), None)
     elif isinstance(template, str):
-        normalized = _template_name(template)
-        match = normalized if normalized in table else None
+        if template.strip().isdigit():
+            target_ref = int(template.strip())
+            match = next((name for name, reference in table.items() if reference == target_ref), None)
+        else:
+            match = None
+        if match is None:
+            normalized = _template_name(template)
+            match = normalized if normalized in table else None
     else:
         raise TypeError("template must be a template name or integer reference")
     if match is None:
         raise KeyError(f"Unknown template: {template!r}")
-    path = Path(templates_dir) / f"{match}.docx"
-    if not path.is_file():
-        raise FileNotFoundError(f"Template '{match}' is indexed but missing: {path}")
-    return path
+    path_docx = Path(templates_dir) / f"{match}.docx"
+    path_dotx = Path(templates_dir) / f"{match}.dotx"
+    if path_docx.is_file():
+        return path_docx
+    if path_dotx.is_file():
+        return path_dotx
+    raise FileNotFoundError(f"Template '{match}' is indexed but missing: {path_docx}")
 
 
 def get_document_by_index(

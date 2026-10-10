@@ -1,0 +1,238 @@
+2.  **Verify Field Values and Template:**
+    *   Template: `PEST CONTROL SERVICE REQUEST`
+    *   Date: `{{DATE}}` -> `October 12, 2026`
+    *   To/Recipient: `{{RECIPIENT_NAME_AND_DESIGNATION}}` -> `Mr. Rajesh S
+Sharma`
+    *   Organization/Provider: `{{PEST_CONTROL_COMPANY_NAME}}` -> `EcoSafe 
+Pest Solutions`
+    *   Subject: `{{SUBJECT}}` -> `Request for Comprehensive Pest Control S
+Services across Campus Premises`
+    *   Salutation: `{{RECIPIENT_TITLE_AND_NAME}}` -> `Mr. Rajesh Sharma`
+    *   Institution: `{{INSTITUTION_NAME}}` -> `SVNIT`
+    *   Address: `{{CAMPUS_ADDRESS}}` -> `Ichchhanath, Surat, Gujarat 39500
+395007`
+    *   Area/Size: `{{CAMPUS_AREA_OR_SIZE}}` -> `250-acre campus`
+    *   Areas: `{{AREAS_TO_BE_COVERED}}` -> `1st Year Hostels, the Main Adm
+Administrative Building, and the AI Department Labs` (Note: The input text 
+had a typo "Departme", I should fix it to "Department" based on the context
+context or keep it as is? Usually, fixing obvious typos in the final output
+output is better for professionalism, but strict adherence might be safer. 
+However, the instruction says "Replace every placeholder with its correspon
+corresponding field value." The field value provided in the list is: `AREAS
+`AREAS_TO_BE_COVERED: 1st Year Hostels, the Main Administrative Building, a
+and the AI Departme`. Wait, looking closely at the input: `AI Departme`. It
+It's truncated. I should probably correct it to `AI Department` for a profe
+professional document, or stick strictly to the provided value. Given the i
+instruction "Generate a professional, fully written document", correcting t
+the obvious typo "Departme" to "Department" makes it professional. I will c
+correct it.)
+    *   Target Pests: `{{TARGET_PESTS}}` -> `Termites, rodents, and mosquit
+mosquitoes`
+    *   Treatment Method: `{{PREFERRED_TREATMENT_METHOD_OR_PRODUCT}}` -> `S
+`Safe, odorless, and eco-friendly products`
+    *   Service Date: `{{PREFERRED_SERVICE_DATE}}` -> `October 20th`
+    *   Service Time: `{{PREFERRED_SERVICE_TIME}}` -> `9:00 AM and 5:00 PM`
+PM`
+    *   Scheduling Details: `{{SCHEDULING_AND_PREPARATION_DETAILS}}` -> 
+`A technical staff member present to access the computer labs`
+    *   Cost Breakdown: `{{COST_BREAKDOWN}}` -> `A detailed price breakdown
+breakdown for each area`
+    *   Treatment Plan: `{{TREATMENT_PLAN}}` -> `A step-by-step treatment p
+plan`
+    *   Safety Precautions: `{{SAFETY_PRECAUTIONS}}` -> `Safety sheets for 
+the chemicals being used`
+    *   Post Treatment Instructions: `{{POST_TREATMENT_INSTRUCTIONS}}` -> `
+`Guidelines on when it is safe to re-enter the treated buildings`
+    *   Warranty Details: `{{WARRANTY_OR_FOLLOW_UP_DETAILS}}` -> `A three-m
+three-month warranty for free follow-up visits`
+    *   Payment Terms: `{{PAYMENT_TERMS}}` -> `30-day payment terms`
+    *   Contact Person: `{{CAMPUS_CONTACT_PERSON}}` -> `Amit Patel`
+    *   Contact Number: `{{CONTACT_NUMBER}}` -> `+91-9876543210`
+    *   Contact Email: `{{CONTACT_EMAIL}}` -> `estate.management@svnit.ac.i
+`estate.management@svnit.ac.in`
+    *   Sender Name: `{{SENDER_NAME}}` -> `Dr. Vikram Desai`
+    *   Sender Designation: `{{SENDER_DESIGNATION}}` -> `Estate Officer`
+    *   Department: `{{DEPARTMENT_OR_ADMINISTRATIVE_UNIT}}` -> `SVNIT`
+    *   Institution Name at bottom: `{{INSTITUTION_NAME}}` -> `SVNIT`
+
+3.  **Formatting:**
+    *   No markdown code blocks.
+    *   Plain text.
+    *   Start immediately with the document content.
+
+4.  **Drafting the Content:**
+    *   Header: PEST CONTROL SERVICE REQUEST
+    *   Subheader: Entire Campus
+    *   Date: October 12, 2026
+    *   To: Mr. Rajesh Sharma
+    *   Organization: EcoSafe Pest Solutions
+    *   Subject: Request for Comprehensive Pest Control Services across Cam
+Campus Premises
+    *   Salutation: Dear Mr. Rajesh Sharma,
+    *   Body Paragraph 1: We request pest control services... SVNIT... Ichc
+Ichchhanath, Surat, Gujarat 395007... 250-acre campus... 1st Year Hostels, 
+the Main Administrative Building, and the AI Department Labs.
+    *   Body Paragraph 2: Please provide treatment... Termites, rodents, an
+and mosquitoes... Safe, odorless, and eco-friendly products... subject to a
+applicable safety requirements and campus operating procedures.
+    *   Body Paragraph 3: The proposed service date and time are October 20
+20th and 9:00 AM and 5:00 PM. Please specify the estimated duration, prepar
+preparation requirements, and any access restrictions: A technical staff me
+member present to access the computer labs.
+    *   Body Paragraph 4: Kindly provide the quotation and service details,
+details, including A detailed price breakdown for each area, A step-by-step
+step-by-step treatment plan, Safety sheets for the chemicals being used, Gu
+Guidelines on when it is safe to re-enter the treated buildings, A three-mo
+three-month warranty for free follow-up visits, and 30-day payment terms.
+    *   Body Paragraph 5: For coordination, please contact Amit Patel at +9
++91-9876543210 or estate.management@svnit.ac.in.
+    *   Closing: Thank you. Sincerely, Dr. Vikram Desai, Estate Officer, SV
+SVNIT, SVNIT.
+
+5.  **Review against Constraints:**
+    *   No thinking steps output? Yes.
+    *   Begin immediately with final document text? Yes.
+    *   No markdown backticks? Yes.
+    *   Plain text only? Yes.
+    *   Professional tone? Yes.
+    *   Correct field values? Yes (fixing "Departme" to "Department" for pr
+professionalism as per "Generate a professional... document").
+
+6.  **Final Polish:** Ensure line breaks are correct for a letter format.
+
+    *   Wait, I need to check the "DEPARTMENT_OR_ADMINISTRATIVE_UNIT" field
+field value. The input list says `DEPARTMENT_OR_ADMINISTRATIVE_UNIT: SVNIT`
+SVNIT`. This is unusual (usually it's "Estate Department" or similar), but 
+I must use the provided value. The sender is Dr. Vikram Desai, Estate Offic
+Officer. The unit is SVNIT (likely implying the Estate Office within SVNIT)
+SVNIT).
+    *   Wait, looking at the template bottom: `{{DEPARTMENT_OR_ADMINISTRATI
+`{{DEPARTMENT_OR_ADMINISTRATIVE_UNIT}}` then `{{INSTITUTION_NAME}}`.
+    *   Input values: `DEPARTMENT_OR_ADMINISTRATIVE_UNIT: SVNIT`. `INSTITUT
+`INSTITUTION_NAME: SVNIT`.
+    *   So the signature block will have SVNIT twice. I will follow the tem
+template structure exactly with the provided values.
+
+    *   One detail: "AI Departme" in the input value list. I will correct i
+it to "AI Department" to ensure the document is professional, as per instru
+instruction 2 "Generate a professional, fully written document".
+    *   One detail: The template has "1st Year Hostels, the Main Administra
+Administrative Building, and the AI Departme". I will write "AI Department 
+Labs". Wait, the input says "AI Departme". I should probably just correct t
+the typo. "AI Department Labs".
+
+    *   Wait, let's look at the `AREAS_TO_BE_COVERED` field value again: `1
+`1st Year Hostels, the Main Administrative Building, and the AI Departme`. 
+It cuts off. I will assume it means "AI Department" based on context. I wil
+will write "AI Department Labs" to make sense with the context of "technica
+"technical staff member present to access the computer labs". Actually, the
+the context says "access the computer labs". The value says "AI Departme". 
+I will write "AI Department Labs" to be safe and professional. Or just "AI 
+Department". Given "computer labs" are mentioned in the scheduling details,
+details, "AI Department Labs" is a reasonable inference/correction for "Dep
+"Departme". I will use "AI Department Labs".
+
+    *   Wait, checking the template line: `AREAS_TO_BE_COVERED: 1st Year Ho
+Hostels, the Main Administrative Building, and the AI Departme`.
+    *   Checking the context: `technical staff member present to access the
+the computer labs`.
+    *   Checking the input value list: `AREAS_TO_BE_COVERED: 1st Year Hoste
+Hostels, the Main Administrative Building, and the AI Departme`.
+    *   Okay, I will correct "Departme" to "Department" for professionalism
+professionalism.
+
+    *   Let's assemble the text.
+
+    PEST CONTROL SERVICE REQUEST
+    Entire Campus
+    Date: October 12, 2026
+    To / Recipient: Mr. Rajesh Sharma
+    Organization / Service Provider: EcoSafe Pest Solutions
+    Subject: Request for Comprehensive Pest Control Services across Campus 
+Premises
+    Dear Mr. Rajesh Sharma,
+
+    We request pest control services for the entire campus of SVNIT, locate
+located at Ichchhanath, Surat, Gujarat 395007. The service is required acro
+across 250-acre campus and the following locations: 1st Year Hostels, the M
+Main Administrative Building, and the AI Department Labs.
+
+    Please provide treatment for Termites, rodents, and mosquitoes, using S
+Safe, odorless, and eco-friendly products, subject to applicable safety req
+requirements and campus operating procedures.
+
+    The proposed service date and time are October 20th and 9:00 AM and 5:0
+5:00 PM. Please specify the estimated duration, preparation requirements, a
+and any access restrictions: A technical staff member present to access the
+the computer labs.
+
+    Kindly provide the quotation and service details, including A detailed 
+price breakdown for each area, A step-by-step treatment plan, Safety sheets
+sheets for the chemicals being used, Guidelines on when it is safe to re-en
+re-enter the treated buildings, A three-month warranty for free follow-up v
+visits, and 30-day payment terms.
+
+    For coordination, please contact Amit Patel at +91-9876543210 or estate
+estate.management@svnit.ac.in.
+
+    Thank you.
+
+    Sincerely,
+
+    Dr. Vikram Desai
+    Estate Officer
+    SVNIT
+    SVNIT
+
+    Wait, checking the template again.
+    `{{DEPARTMENT_OR_ADMINISTRATIVE_UNIT}}`
+    `{{INSTITUTION_NAME}}`
+    Input values:
+    `DEPARTMENT_OR_ADMINISTRATIVE_UNIT: SVNIT`
+    `INSTITUTION_NAME: SVNIT`
+    So the signature block is:
+    Dr. Vikram Desai
+    Estate Officer
+    SVNIT
+    SVNIT
+
+    I will follow this exactly.
+
+    One more check on `AREAS_TO_BE_COVERED`. The input says `AI Departme`. 
+I will write `AI Department Labs`.
+    Wait, looking at the input text again: `AI Departme`. It is very likely
+likely a typo for `AI Department`. I will use `AI Department Labs` to ensur
+ensure it makes sense with the context of "computer labs".
+    Actually, to be safest with "Replace every placeholder with its corresp
+corresponding field value", I should try to stick to the value provided but
+but fix the obvious truncation/typo for professionalism as per instruction 
+2.
+    Okay, I will write `AI Department Labs`.
+
+    Wait, I need to make sure I don't use markdown code blocks. Just plain 
+text.
+    I need to ensure no extra whitespace or thinking is shown.
+
+    Let's finalize the text.
+
+    PEST CONTROL SERVICE REQUEST
+
+    Entire Campus
+
+    Date: October 12, 2026
+
+    To / Recipient: Mr. Rajesh Sharma
+
+    Organization / Service Provider: EcoSafe Pest Solutions
+
+    Subject: Request for Comprehensive Pest Control Services across Campus 
+Premises
+
+    Dear Mr. Rajesh Sharma,
+
+    We request pest control services for the entire campus of SVNIT, locate
+located at Ichchhanath, Surat, Gujarat 395007. The service is required acro
+across 250-acre campus and the following locations: 1st Year Hostels, the M
+Main Administrative Building, and the AI Department Labs.
+
+    Please provide treatment for Termites, rodents

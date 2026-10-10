@@ -1,0 +1,26 @@
+DATE: October 12, 2026
+RECIPIENT_NAME_AND_DESIGNATION: Mr. Rajesh Sharma
+PEST_CONTROL_COMPANY_NAME: EcoSafe Pest Solutions
+SUBJECT: Request for Comprehensive Pest Control Services across Campus Premises
+RECIPIENT_TITLE_AND_NAME: Mr. Rajesh Sharma
+INSTITUTION_NAME: SVNIT
+CAMPUS_ADDRESS: Ichchhanath, Surat, Gujarat 395007
+CAMPUS_AREA_OR_SIZE: 250-acre campus
+AREAS_TO_BE_COVERED: 1st Year Hostels, the Main Administrative Building, and the AI Departme
+TARGET_PESTS: Termites, rodents, and mosquitoes
+PREFERRED_TREATMENT_METHOD_OR_PRODUCT: Safe, odorless, and eco-friendly products
+PREFERRED_SERVICE_DATE: October 20th
+PREFERRED_SERVICE_TIME: 9:00 AM and 5:00 PM
+SCHEDULING_AND_PREPARATION_DETAILS: A technical staff member present to access the computer labs
+COST_BREAKDOWN: A detailed price breakdown for each area
+TREATMENT_PLAN: A step-by-step treatment plan
+SAFETY_PRECAUTIONS: Safety sheets for the chemicals being used
+POST_TREATMENT_INSTRUCTIONS: Guidelines on when it is safe to re-enter the treated buildings
+WARRANTY_OR_FOLLOW_UP_DETAILS: A three-month warranty for free follow-up visits
+PAYMENT_TERMS: 30-day payment terms
+CAMPUS_CONTACT_PERSON: Amit Patel
+CONTACT_NUMBER: +91-9876543210
+CONTACT_EMAIL: estate.management@svnit.ac.in
+SENDER_NAME: Dr. Vikram Desai
+SENDER_DESIGNATION: Estate Officer
+DEPARTMENT_OR_ADMINISTRATIVE_UNIT: SVNIT

@@ -1,0 +1,71 @@
+:root {
+  /* Color Palette - Quiet Editorial Linen & Deep Ink Blue */
+  --bg-canvas: #FAF9F6;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F3EFEA;
+  --bg-hover: #EFEAE2;
+  --bg-active: #E6E0D5;
+
+  --text-primary: #1C1917;
+  --text-secondary: #57534E;
+  --text-muted: #8C857B;
+  --text-inverted: #FFFFFF;
+
+  /* Accent - Deep Ink Blue */
+  --accent-primary: #1E3A5F;
+  --accent-hover: #152A45;
+  --accent-active: #0D1C30;
+  --accent-subtle: #F0F4F8;
+  --accent-border: #C8D9E8;
+
+  /* Signals & Status */
+  --danger-primary: #9B2C2C;
+  --danger-subtle: #FDF2F2;
+  --danger-border: #F5C6C6;
+
+  --warning-primary: #8C5A14;
+  --warning-subtle: #FEF9EE;
+  --warning-border: #F6E2B7;
+
+  --success-primary: #276749;
+  --success-subtle: #F0F7F4;
+  --success-border: #C6E4D4;
+
+  /* Hairline Borders */
+  --border-hairline: #E7E3D8;
+  --border-strong: #D1CBC0;
+  --border-focus: #1E3A5F;
+
+  /* Typography */
+  --font-serif: "Charter", "Bitstream Charter", "Georgia", "Cambria", serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.84375rem;  /* 13.5px */
+  --text-base: 0.9375rem; /* 15px */
+  --text-md: 1.0625rem;   /* 17px */
+  --text-lg: 1.25rem;     /* 20px */
+  --text-xl: 1.5rem;      /* 24px */
+  --text-2xl: 1.875rem;   /* 30px */
+
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  /* Structural Radii */
+  --radius-sm: 3px;
+  --radius-md: 5px;
+  --radius-lg: 6px;
+
+  /* Elevation */
+  --shadow-hairline: 0 1px 2px rgba(28, 25, 23, 0.04);
+  --shadow-paper: 0 1px 3px rgba(28, 25, 23, 0.05), 0 6px 16px rgba(28, 25, 23, 0.04);
+  --shadow-modal: 0 4px 12px rgba(28, 25, 23, 0.08), 0 16px 32px rgba(28, 25, 23, 0.06);
+
+  /* Layout Measurements */
+  --sidebar-width: 320px;
+  --header-height: 56px;
+  --container-max: 1200px;
+  --content-max: 760px;
+}

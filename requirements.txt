@@ -1,0 +1,10 @@
+# Scriptify - AI-Powered Local Document Generator
+# Core Python Dependencies (Cross-platform for Linux and Windows)
+
+fastapi>=0.110.0
+uvicorn>=0.28.0
+python-multipart>=0.0.9
+python-docx>=1.1.0
+fpdf2>=2.8.0
+pydantic>=2.7.0
+

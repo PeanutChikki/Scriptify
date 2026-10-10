@@ -44,7 +44,7 @@ def thought_rmv(text: str) -> str:
 def ask_model(prompt: str) -> str:
     # Prompt goes through stdin, so quotes/newlines are safe.
     result = subprocess.run(
-        ["ollama", "run", MODEL, "--hidethinking"],
+        ["ollama", "run", MODEL, "--hidethinking", "--think=false"],
         input=prompt,
         capture_output=True,
         text=True,

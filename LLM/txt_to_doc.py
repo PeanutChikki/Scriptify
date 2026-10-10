@@ -60,37 +60,49 @@ def insert_after(paragraph, text: str) -> Paragraph:
     return new_par
 
 
-def txt_to_doc() -> None:
-    if not TXT_FILE.exists():
-        sys.exit(f"Could not find {TXT_FILE}")
-    if not TEMPLATE.exists():
-        sys.exit(f"Could not find {TEMPLATE}")
+def txt_to_doc(
+    txt_path: str | Path | None = None,
+    template_path: str | Path | None = None,
+    output_path: str | Path | None = None,
+) -> Path:
+    source_txt = Path(txt_path).resolve() if txt_path else TXT_FILE
+    source_tmpl = Path(template_path).resolve() if template_path else TEMPLATE
+    dest_docx = Path(output_path).resolve() if output_path else DOCX_FILE
 
-    lines = TXT_FILE.read_text(encoding="utf-8").splitlines()
+    if not source_txt.exists():
+        raise FileNotFoundError(f"Could not find text source: {source_txt}")
+    if not source_tmpl.exists():
+        raise FileNotFoundError(f"Could not find template file: {source_tmpl}")
 
-    doc = Document(str(TEMPLATE))
+    lines = source_txt.read_text(encoding="utf-8").splitlines()
+
+    doc = Document(str(source_tmpl))
 
     # Only body paragraphs are touched. Tables, headers, footers, images,
     # page setup, styles and section breaks are never modified.
     slots = [p for p in doc.paragraphs if is_slot(p)]
     if not slots:
-        sys.exit("No editable paragraphs found in the template.")
+        # Fallback: if template has no paragraphs, create them
+        for line in lines:
+            doc.add_paragraph(line)
+    else:
+        # 1) Fill existing paragraphs in order
+        for slot, line in zip(slots, lines):
+            set_text(slot, line)
 
-    # 1) Fill existing paragraphs in order
-    for slot, line in zip(slots, lines):
-        set_text(slot, line)
+        # 2) Not enough paragraphs? Add the extra lines right after the last one used
+        if len(lines) > len(slots):
+            last = slots[-1]
+            for line in lines[len(slots):]:
+                last = insert_after(last, line)
 
-    # 2) Not enough paragraphs? Add the extra lines right after the last one used
-    if len(lines) > len(slots):
-        last = slots[-1]
-        for line in lines[len(slots):]:
-            last = insert_after(last, line)
+        # 3) Too many paragraphs? Blank the leftovers (text only, images stay)
+        elif len(lines) < len(slots):
+            for slot in slots[len(lines):]:
+                for r in text_runs(slot):
+                    r.text = ""
 
-    # 3) Too many paragraphs? Blank the leftovers (text only, images stay)
-    elif len(lines) < len(slots):
-        for slot in slots[len(lines):]:
-            for r in text_runs(slot):
-                r.text = ""
-
-    doc.save(str(DOCX_FILE))
-    print(f"Done. Saved to: {DOCX_FILE}")
+    dest_docx.parent.mkdir(parents=True, exist_ok=True)
+    doc.save(str(dest_docx))
+    print(f"Done. Saved to: {dest_docx}")
+    return dest_docx
